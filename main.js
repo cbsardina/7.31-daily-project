@@ -97,4 +97,8 @@ let formData = [
 
 // -------- Your Code Goes Below this Line --------
 
+let fields = document.getElementById('fields');
 
+let formInput = document.createElement('input');
+fields.appendChild(formInput);
+formInput.classList.add("type", "label", "id", "icon", "options");
