@@ -99,12 +99,6 @@ let formData = [
 
 let fields = document.getElementById('fields');
 
-// let input = document.createElement('input');
-// fields.appendChild(input);
-// input.classList.add("type", "label", "id", "icon", "options");
-//
-
-
 for (let i = 0; i < formData.length; i++) {
 if (formData[i].type === 'text'
     || formData[i].type === 'email'
@@ -116,8 +110,6 @@ if (formData[i].type === 'text'
       input.setAttribute("placeholder", formData[i].label);
       input.setAttribute("id", formData[i].id);
       input.setAttribute("icon", ("fa " + formData[i].icon));
-
-      // console.log(input);
     }
 
     else if (formData[i].type === 'select') {
@@ -131,8 +123,6 @@ if (formData[i].type === 'text'
 
           option.setAttribute("label", formData[i].options[j].label);
           option.setAttribute("value", formData[i].options[j].value);
-
-          // console.log(option);
         }
       }
         else if (formData[i].type === 'textarea') {
@@ -143,104 +133,5 @@ if (formData[i].type === 'text'
           textarea.setAttribute("placeholder", formData[i].label);
           textarea.setAttribute("id", formData[i].id);
           textarea.setAttribute("icon", ("fa " + formData[i].icon));
-
-          // console.log(textarea);
         }
 }
-
-
-
-
-  // input.setAttribute("options", formData[i].options);
-
-    // if (formData[i].options) {
-    //
-    //
-    //       }
-    //     }
-
-
-
-
-
-// for (let i = 0; i < formData.length; i++) {
-//   if (formData[i].options) {
-//
-//     for (let j = 0; j < formData[i].options.length; j++) {
-//
-//         let option = document.createElement('option');
-//         select.appendChild(option);
-//
-//         option.setAttribute("label", formData[i].options[j].label);
-//         option.setAttribute("value", formData[i].options[j].value);
-//         }
-
-
-// }
-
-// if (formData[i].options)
-
-
-// let first = formData[i];
-// let second = formData[i];
-// let third = formData[i];
-// let fourth = formData[i];
-// let fifth = formData[i];
-
-// input.setAttribute("type", first.type);
-// input.setAttribute("placeholder", second.label);
-// input.setAttribute("id", third.id);
-// input.setAttribute("icon", ("fa " + fourth.icon));
-// input.setAttribute("options", fifth.options);
-
-//-----------
-
-// let first = formData.options[j];
-// let second = formData.options[j];
-//   <select type="select" id="size" name="size">
-//                       <option value="small" selected>Small</option>
-//                       <option value="medium">Medium</option>
-//                       <option value="large">Large</option>
-//                   </select>
-//
-//                   // Replace the inner HTML
-// myElement.innerHTML = `
-//   <div>
-//     <h2>New content</h2>
-//     <p>beep boop beep boop</p>
-//   </div>
-
-// input.classList.add("type");
-// input.classList.add("label");          DONT KNOW IF THIS IS NEEDED
-// input.classList.add("id");
-// input.classList.add("icon");
-// input.classList.add("options");
-
-//---------------------------------------
-
-// console.log(input.classList.contains("type"));
-// console.log(input.classList.contains("label"));    CECK FOR CLASS TYPE
-// console.log(input.classList.contains("id"));
-// console.log(input.classList.contains("icon"));
-// console.log(input.classList.contains("options"));
-
-// formInput.type = formData[i].type;
-// formInput.label = formData[i].label;
-// formInput.id = formData[i].id;
-// formInput.icon = formData[i].icon;
-// formInput.options = formData[i].options;
-
-// console.log(first.label);
-// console.log(second.label);
-// console.log(third.label);
-// console.log(fourth.label);
-// console.log(fifth.label);
-
-// input.classList.add("type");
-
-
-  // console.log(formInput.classList.contains("type"));
-  // console.log(formInput.classList.contains("label"));
-  // console.log(formInput.classList.contains("id"));
-  // console.log(formInput.classList.contains("icon"));
-  // console.log(formInput.classList.contains("options"));
