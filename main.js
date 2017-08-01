@@ -99,6 +99,63 @@ let formData = [
 
 let fields = document.getElementById('fields');
 
-let formInput = document.createElement('input');
-fields.appendChild(formInput);
-formInput.classList.add("type", "label", "id", "icon", "options");
+// let input = document.createElement('input');
+// fields.appendChild(input);
+// input.classList.add("type", "label", "id", "icon", "options");
+//
+
+
+for (let i = 0; i < formData.length; i++) {
+
+  let input = document.createElement('input');
+  fields.appendChild(input);
+
+  let first = formData[i];
+  let second = formData[i];
+  let third = formData[i];
+  let fourth = formData[i];
+  let fifth = formData[i];
+
+  input.setAttribute("type", first.type);
+  input.setAttribute("label", second.label);
+  input.setAttribute("id", third.id);
+  input.setAttribute("icon", fourth.icon);
+  input.setAttribute("options", fifth.options);
+
+
+
+  // input.classList.add("type");
+  // input.classList.add("label");          DONT KNOW IF THIS IS NEEDED
+  // input.classList.add("id");
+  // input.classList.add("icon");
+  // input.classList.add("options");
+
+
+  console.log(input);
+  // console.log(input.classList.contains("type"));
+  // console.log(input.classList.contains("label"));    CECK FOR CLASS TYPE
+  // console.log(input.classList.contains("id"));
+  // console.log(input.classList.contains("icon"));
+  // console.log(input.classList.contains("options"));
+
+  // formInput.type = formData[i].type;
+  // formInput.label = formData[i].label;
+  // formInput.id = formData[i].id;
+  // formInput.icon = formData[i].icon;
+  // formInput.options = formData[i].options;
+
+  // console.log(first.label);
+  // console.log(second.label);
+  // console.log(third.label);
+  // console.log(fourth.label);
+  // console.log(fifth.label);
+
+  // input.classList.add("type");
+
+
+    // console.log(formInput.classList.contains("type"));
+    // console.log(formInput.classList.contains("label"));
+    // console.log(formInput.classList.contains("id"));
+    // console.log(formInput.classList.contains("icon"));
+    // console.log(formInput.classList.contains("options"));
+}
