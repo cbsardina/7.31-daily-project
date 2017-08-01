@@ -106,21 +106,23 @@ let fields = document.getElementById('fields');
 
 
 for (let i = 0; i < formData.length; i++) {
+if (formData[i].type === 'text'
+    || formData[i].type === 'email'
+    || formData[i].type === 'tel') {
+      let input = document.createElement('input');
+      fields.appendChild(input);
 
-  let input = document.createElement('input');
-  fields.appendChild(input);
+      input.setAttribute("type", formData[i].type);
+      input.setAttribute("placeholder", formData[i].label);
+      input.setAttribute("id", formData[i].id);
+      input.setAttribute("icon", ("fa " + formData[i].icon));
 
-  input.setAttribute("type", formData[i].type);
-  input.setAttribute("placeholder", formData[i].label);
-  input.setAttribute("id", formData[i].id);
-  input.setAttribute("icon", ("fa " + formData[i].icon));
+      // console.log(input);
+    }
 
-  let select = document.createElement('select');
-  input.appendChild(select);
-
-  // input.setAttribute("options", formData[i].options);
-
-    if (formData[i].options) {
+    else if (formData[i].type === 'select') {
+      let select = document.createElement('select');
+      fields.appendChild(select);
 
       for (let j = 0; j < formData[i].options.length; j++) {
 
@@ -129,12 +131,37 @@ for (let i = 0; i < formData.length; i++) {
 
           option.setAttribute("label", formData[i].options[j].label);
           option.setAttribute("value", formData[i].options[j].value);
-          }
+
+          // console.log(option);
         }
+      }
+        else if (formData[i].type === 'textarea') {
+          let textarea = document.createElement('textarea');
+          fields.appendChild(textarea);
 
-  console.log(input);
+          textarea.setAttribute("type", formData[i].type);
+          textarea.setAttribute("placeholder", formData[i].label);
+          textarea.setAttribute("id", formData[i].id);
+          textarea.setAttribute("icon", ("fa " + formData[i].icon));
 
+          // console.log(textarea);
+        }
 }
+
+
+
+
+  // input.setAttribute("options", formData[i].options);
+
+    // if (formData[i].options) {
+    //
+    //
+    //       }
+    //     }
+
+
+
+
 
 // for (let i = 0; i < formData.length; i++) {
 //   if (formData[i].options) {
