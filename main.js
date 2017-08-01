@@ -116,25 +116,20 @@ for (let i = 0; i < formData.length; i++) {
   input.setAttribute("icon", ("fa " + formData[i].icon));
   input.setAttribute("options", formData[i].options);
 
-
-    if (formData[i].options === 'select') {
+    if (formData[i].options) {
       let select = document.createElement('select');
       input.appendChild(select);
-    }
-  for (let j = 0; j < formData[i].options.length; j++) {
+      for (let j = 0; j < formData[i].options.length; j++) {
 
+          let option = document.createElement('option');
+          select.appendChild(option);
 
-    let option = document.createElement('option');
-    select.appendChild(option);
-
-    // let first = formData.options[j];
-    // let second = formData.options[j];
-
-    option.setAttribute("placeholder", formData[i].options[j].label);
-    option.setAttribute("value", formData[i].options[j].value);
-
-
-  }
+          option.setAttribute("label", formData[i].options[j].label);
+          option.setAttribute("value", formData[i].options[j].value);
+          }
+        }
+          // let first = formData.options[j];
+          // let second = formData.options[j];
 //   <select type="select" id="size" name="size">
 //                       <option value="small" selected>Small</option>
 //                       <option value="medium">Medium</option>
